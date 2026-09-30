@@ -1,0 +1,7 @@
+def two_sum(nums, target):
+    index_of = {}
+    for i, x in enumerate(nums):
+        if target - x in index_of:
+            return index_of[target - x], i
+        index_of[x] = i
+    return None
